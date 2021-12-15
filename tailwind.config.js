@@ -6,14 +6,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Josefin sans', 'sans-serif']
+      sans: ['Nunito sans', 'sans-serif']
     },
     colors: {
-      white: '#F1F1F1',
-      black: '#18191F',
-      gray: '#CBD5E1',
-      purple: '#A78BFA',
-      blue: '#22D3EE',
+      "white": "#fafbfc",
+      "black": "#18191F",
+      "gray-dark": "#635f69",
+      "gray": "#a8a5ab",
+      "gray-accent": "#C5C3C7",
+      "primary": "#4687c7",
+      "primary-dark": "#317AC1",
+      "primary-accent": "#6fa2d4",
+      "secondary": "#F9968B",
+      "secondary-dark": "#e0877d",
+      "secondary-accent": "#fbb6ae"
     },
     boxShadow: {
       sm: '0px 2px 4px 0x rgba(11, 10, 55, 0.15)',

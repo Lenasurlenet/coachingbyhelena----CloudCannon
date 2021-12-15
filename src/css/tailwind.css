@@ -1,57 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,500;1,600;1,700&display=swap');
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;1,400;1,600&display=swap');
+
+* {
+  outline: solid 1px red;
+}
+
+
+html, body {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  min-width:100%;
+  min-height:100%;
+  background-color: #fafbfc;
+}
 
 
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
 @layer base {
 
-  html, body {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    min-width:100%;
-    min-height:100%;
-    background-color: #fafbfc;
+  body {
+    @apply w-full h-auto font-sans grid grid-cols-1;
   }
 
   section {
-    @apply w-full mx-auto py-6 text-center grid grid-cols-1 place-items-center
+    @apply py-12 lg:py-16 w-full h-auto bg-white mx-auto;
   }
-
-  h1 {
-    @apply font-sans italic font-semibold pt-2 pb-10 text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
-  }
-
-  h2 {
-    @apply font-sans italic font-semibold text-black pb-4 text-2xl md:text-3xl lg:text-4xl;
-  }
-
-  h3 {
-    @apply font-sans italic font-semibold text-xl md:text-2xl text-black py-3;
-  }
-
-  h4 {
-  @apply font-sans font-semibold text-lg md:text-xl py-4;
-  }
-
-  p {
-    @apply font-sans text-base text-white md:text-lg;
-  }
-
-  a {
-    @apply text-base text-black hover:opacity-75 md:text-lg font-medium;
-  }
-
+  
   .customContainer {
-    @apply w-5/6 max-w-screen-2xl mx-auto px-6;
+    @apply mx-auto w-full h-auto max-w-screen-2xl py-0 px-6 lg:px-8 xl:px-10 2xl:px-12;
+  }
+  
+  p {
+    @apply text-base md:text-lg text-black;
+  }
+  
+  h1 {
+    @apply italic font-semibold pt-2 pb-10 text-white tracking-normal leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  h2 {
+    @apply italic font-semibold md:leading-tight tracking-normal text-black pb-4 sm:leading-none text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply italic font-semibold text-xl md:text-2xl text-black py-3;
+  }
+  
+  h4 {
+  @apply font-semibold  text-lg md:text-xl py-4;
   }
 
-  .display {
-    @apply font-extrabold text-purple py-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
+  .nav-link_tab {
+    @apply
+    w-full
+    block
+    font-medium
+    text-xs
+    leading-tight
+    uppercase
+    border-x-0 border-t-0 border-b-2
+    px-6
+    py-3
+    my-2
+    hover:bg-black
+    focus:border-secondary
+  }
+}
+
+@layer components {
+
+  .undertitle {
+    @apply font-medium text-white text-lg md:text-xl;
+  }
+  
+  .hero__text {
+    @apply text-white font-medium text-lg md:text-xl lg:text-2xl;
+  }
+  
+  .overtitle {
+    @apply font-normal uppercase text-white text-xs md:text-base;
+  }
+  
+  .btn {
+    @apply rounded-lg px-4 py-3
+         bg-gray text-base md:text-lg font-medium normal-case text-white hover:bg-gray-dark duration-300 hover:-translate-y-0.5 transform transition border flex justify-center items-center focus:outline-none focus:ring;
+  }
+  
+  .btn-primary {
+    @apply bg-primary font-medium text-white hover:bg-primary-dark
+           focus:ring-primary active:bg-primary hover:border-white;
+  }
+  
+  .btn-secondary {
+     @apply bg-black border-primary text-primary-accent hover:bg-primary-dark hover:text-white font-medium;
   }
 
+  .card__sellingPoint {
+    @apply w-full px-4 py-6 md:w-72 md:h-60 flex flex-col justify-center items-center text-white bg-black border rounded-lg;
+  }
+
+  .card {
+    @apply w-full h-48 lg:h-96 bg-black rounded-lg p-5 md:p-8 md:w-1/2 mb-8 lg:mb-0;
+  }
+
+  .card_testimonial {
+    @apply bg-black w-full border-primary rounded-lg p-4 md:p-6 shadow-lg mx-auto;
+  }
+
+  .icon {
+    @apply text-secondary w-8 h-8 md:h-10 md:w-10 lg:w-12 lg:h-12;
+  }
+
+  .menu_item {
+    @apply text-white text-sm sm:text-base md:text-lg font-normal capitalize tracking-wide transition-colors duration-200 hover:text-secondary-accent active:text-secondary-dark;
+  } 
 }
