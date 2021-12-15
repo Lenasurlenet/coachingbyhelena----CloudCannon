@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,500;1,600;1,700&display=swap');
+
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+
+  html, body {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    min-width:100%;
+    min-height:100%;
+    background-color: #fafbfc;
+  }
+
+  section {
+    @apply w-full mx-auto py-6 text-center grid grid-cols-1 place-items-center
+  }
+
+  h1 {
+    @apply font-sans italic font-semibold pt-2 pb-10 text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  h2 {
+    @apply font-sans italic font-semibold text-black pb-4 text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply font-sans italic font-semibold text-xl md:text-2xl text-black py-3;
+  }
+
+  h4 {
+  @apply font-sans font-semibold text-lg md:text-xl py-4;
+  }
+
+  p {
+    @apply font-sans text-base text-white md:text-lg;
+  }
+
+  a {
+    @apply text-base text-black hover:opacity-75 md:text-lg font-medium;
+  }
+
+  .customContainer {
+    @apply w-5/6 max-w-screen-2xl mx-auto px-6;
+  }
+
+  .display {
+    @apply font-extrabold text-purple py-6 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
+  }
+
+}
