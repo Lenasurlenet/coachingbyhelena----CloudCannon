@@ -96,7 +96,7 @@ html, body {
   }
   
   .btn-secondary {
-     @apply bg-black border-primary text-primary-accent hover:bg-primary-dark hover:text-white font-medium;
+     @apply bg-white border-primary text-primary-accent hover:bg-primary-dark hover:text-white font-medium;
   }
 
   .card__sellingPoint {
