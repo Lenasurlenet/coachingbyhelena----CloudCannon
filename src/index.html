@@ -1,71 +1,302 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/tailwind.css">
-  <title>Website title</title>
-</head>
-<body>
-  <header id="homeHero" class="block w-full bg-gradient-to-r from-primary to-secondary pt:12 md:pt-16 lg:pt-20 pb-24 2xl:-pb-32">
-    <div class="customContainer">
-      <div class="homeHero__wrapper w-full h-full flex flex-col-reverse md:flex-row">
+---
+title: Accueil
+layout: 'base.njk'
+---
+  
+  <!--Hero Section-->
+
+  <header id="homeHero" class="block w-full bg-gradient-to-r from-black to-primary pt:12 md:pt-16 lg:pt-20 pb-24 2xl:-pb-32">
+   <div class="customContainer">
+    <div class="homeHero__wrapper w-full h-full flex flex-col-reverse md:flex-row">
      
-        <div class="heroRight block p-4 lg:p-8 w-full md:w-1/2 xl:3/5">
-          <span class="overtitle">
-            Coaching sportif privé à Bordeaux ou en visio
-          </span>
-          <h1 class="homeHero-title italic font-extrabold pt-4 pb-10 text-lighter-secondary leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-            Faites le plein d'énergie ...
-          </h1>
-          <span class="heroText text-white font-medium text-lg md:text-xl">
-            Retrouvez la forme, dessinez vos muscles, votre ligne et restez motivé.e, grâce à un programme sur-mesure et un suivi personnalisé.
-          </span>
-          <div class="cta max-w-xs md:flex md:flex-col space-y-6 py-6 md:mt-10">
-            <button class="btn btn-primary">
-              Je veux être coaché-e
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-            </button>
-            <button class="btn btn-secondary">
-              <a href="/#homeMain" class="flex">
-                Visiter
-                <img src="/icons/arrowdown.svg" alt="icone flêche vers le bas" class="ml-3">
-              </a>
-            </button>
-          </div>
+      <div class="heroRight block p-4 lg:p-8 w-full md:w-1/2 xl:3/5">
+        <span class="overtitle">
+          Coaching sportif privé à Bordeaux ou en visio
+        </span>
+        <h1 class="homeHero-title italic font-extrabold pt-4 pb-10 text-lighter-secondary leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+          Faites le plein d'énergie ...
+        </h1>
+        <span class="heroText text-white font-medium text-lg md:text-xl">
+          Retrouvez la forme, dessinez vos muscles, votre ligne et restez motivé.e, grâce à un programme sur-mesure et un suivi personnalisé.
+        </span>
+        <div class="cta max-w-xs md:flex md:flex-col space-y-6 py-6 md:mt-10">
+          <button class="btn btn-primary">
+            Je veux être coaché-e
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+          </button>
+          <button class="btn btn-secondary">
+            <a href="/#homeMain" class="flex">
+              Visiter
+              <img src="/icons/arrowdown.svg" alt="icone flêche vers le bas" class="ml-3">
+            </a>
+          </button>
         </div>
-        <div class="heroLeft p-4 md:p6 lg:p-8 md:w-1/2 xl:h-2/5">
-          <img src="/images/pose_du_coach.jpg" class="h-96 w-full block rounded-lg object-cover object-center"/>
-            <div class="relative rounded-b-lg rounded-t-none bottom-4 xl:-inset-8 quote bg-black xl:rounded-lg p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9">
-              <svg class="text-secondary w-10 h-10 fill="FFFFF" fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
-                <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
-              </svg>
-              <blockquote class="w-full text-white">Si tu prends le temps, que tu es motivé.e, je te promets un résultat sur ton bien-être, sur ta posture, sur ton ressenti dans ton corps, si on travaille autant chacun.e.</blockquote>
-            </div>
-        </div>   
       </div>
+      <div class="heroLeft p-4 md:p6 lg:p-8 md:w-1/2 xl:h-2/5">
+        <img src="/images/pose_du_coach.jpg" class="h-96 w-full block rounded-lg object-cover object-center"/>
+          <div class="relative rounded-b-lg rounded-t-none bottom-4 xl:-inset-8 quote bg-black xl:rounded-lg p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9">
+            <svg class="text-secondary w-10 h-10 fill="FFFFF" fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+              <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+            </svg>
+            <blockquote class="w-full text-white">Si tu prends le temps, que tu es motivé.e, je te promets un résultat sur ton bien-être, sur ta posture, sur ton ressenti dans ton corps, si on travaille autant chacun.e.</blockquote>
+          </div>
+        </div>   
     </div>
+
+   </div>
   </header>
 
-  <footer class="">
-    <div class="customContainer py-12">
-      <div class="max-w-3xl mx-auto">
-        <nav class="grid grid-cols-2 gap-4 text-center sm:grid-cols-3 lg:grid-cols-6">
-          <a href="">menu item</a>
-          <a href="">menu item</a>
-          <a href="">menu item</a>
-          <a href="">menu item</a>
-          <a href="">Contact</a>
-        </nav>
+  <!-- offer -->
+       <section id="sellingPoints" class="pt-0 pb-6 h-auto mx-auto pb-10">
+         <div class="customContainer">
+            <div class="sellingPoints-wrapper -mt-12 md:-mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
+                
+              <article class="card__sellingPoint">
+                    <img src="/icons/activity.svg" alt="icon activity">
+                    <h4>
+                      Evaluation
+                    </h4>
+                    <p class="text-md text-white py-4">
+                     Test de condition physique. <br> Déterminons votre objectif.
+                    </p>
+              </article>
 
-        <div class="flex justify-center mt-8 space-x-6">
-          <a href="/">Brand name</a>
+              <article class="card__sellingPoint">
+                    <img src="/icons/chart.svg" alt="icon activity">
+                    <h4>
+                      Suivi personnalisé
+                    </h4>
+                    <p class="text-md text-white py-4">
+                      Vos progrès sont quantifiés <br> Vos entrainements évolutifs.
+                    </p>
+              </article>
+              <article class="card__sellingPoint">
+                    <img src="/icons/monitor.svg" alt="icon screen">
+                    <h4>
+                      Domicile, extérieur, visio..
+                    </h4>
+                    <p class="text-md text-white py-4">
+                      Gagnez du temps et du confort <br> Choisissez où a lieu votre séance.
+                    </p>
+              </article>
+            </div>
+         </div>
+       </div>
+
+    <!-- Coaching preview -->
+        <section id="coachingPreview" class="coaching bg-white">
+          <div class="customContainer">
+            <div class="blockTitle">
+              <h2>Entraînements sur-mesures</h2>
+              <p class="undertitle text-black">
+                Déterminons votre objectif et un parcours d'accompagnement.
+              </p>
+            </div>
+            <div class="coaching__content w-full block lg:py-16 lg:flex justify-stretch">
+              <div class="coaching__images mt-10 lg:-mx-4 lg:mt-0 lg:w-2/3 xl:w-3/5">
+                  <div class="relative space-y-4">
+                      <div class="flex items-end justify-start space-x-4">
+                          <img class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-72" src="https://images.pexels.com/photos/5262963/pexels-photo-5262963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="1"/>
+                          <img class="rounded-lg shadow-lg w-36 sm:w-48 md:w-72 lg:w-56"  src="https://images.pexels.com/photos/6740753/pexels-photo-6740753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="2"/>
+                      </div>
+                      <div class="flex items-start justify-center space-x-4">
+                          <img class="rounded-lg shadow-lg w-32 md:w-56" src="https://images.unsplash.com/photo-1591258370814-01609b341790?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="3"/>
+                          <img class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-64" src="/images/renforcement_musculaire.jpg" alt="4"/>
+                      </div>
+                  </div>
+              </div>
+              <div class="coachingFeatures mt-6 lg:w-2/5">
+                <ul class="mt-10">
+                    <li>
+                        <article class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
+                                   <img src="/icons/dumbell.svg" alt="" class="text-secondary">
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-black">
+                                  Renforcement musculaire
+                                </h3>
+                                <p class="text-black mt-2">
+                                  Pour gagner en force et en énergie.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="mt-10">
+                        <article class="flex items-start">
+                            <div class="">
+                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
+                                  <img src="/icons/scale.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-black">
+                                  Perte de poids
+                                </h3>
+                                <p class="text-black mt-2">
+                                  Pour dessiner votre silhouette et atteindre votre objectif de poids.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="mt-10">
+                        <article class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
+                                  <img src="/icons/battery.svg" alt="">   
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-black">
+                                  Sport santé senior
+                                </h3>
+                                <p class="text-black mt-2">
+                                  Prendre soin de son corps en améliorer sa qualité de vie. en gardant un corps fonctionnel et tonique.
+                                </p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+                <div class="relative w-full mt-16">
+                  <a href="/coaching/#coaching" class="absolute flex flex-end items-center text-font-medium text-base md:text-lg xl:text-xl text-secondary-dark hover:text-secondary active:text-secondary-dark transition transform" >
+                    Tous les programmes
+                    <img src="/icons/arrowright.svg" alt="icone flêche vers la droite" class="ml-3">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+   <!-- Testimonials preview -->
+<section class="testimonial bg-gradient-to-r from-primary to-black">
+    <div class="customContainer">
+        <div class="w-full h-full flex flex-col items-center lg:flex-row">
+            <div class="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 md:w-1/2">
+                <p class="mb-2 text-base font-medium tracking-tight text-secondary uppercase">Des clientes satisfaites</p>
+                <h2 class="text-white">Témoignages</h2>
+                <p class="my-6 text-lg text-white">Quelques mots de mes coachées sur le travail que nous accomplissons ensemble</p>
+            </div>
+            <div class="w-full space-y-5 md:space-y-6 pb-6 md:w-1/2">
+
+                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
+                      <div class="space-y-4">
+                        <blockquote class="relative">
+                          <svg class="quote absolute left-0 w-10 h-10 text-secondary fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                            <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+                          </svg> <br>
+                          <p class="pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
+                            Ses connaissances aussi bien en anatomie qu’en physiologie font que Helena n’est pas un simple coach qui a des objectifs personnels à atteindre, non.
+                            Elle adapte et tire le meilleur de nous mêmes en nous poussant à nous améliorer même dans nos zones de faiblesse de sorte que les petites fragilités deviennent des forces. Donc un vrai accompagnement personnalisé et attentif.
+                          </p>
+                        </blockquote>
+                        <div class="info flex place-items-center space-x-3">
+                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_kamar.png" alt="Photo de profil de Kamar" width="384" height="512">
+                          <figcaption class="font-medium">
+                            <div class="text-primary">
+                              Kamar
+                            </div>
+                            <div class="text-white">
+                              Orthodentiste
+                            </div>
+                          </figcaption>
+                        </div>
+                      </div>
+                </figure>
+                
+                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
+                      <div class="space-y-4">
+                        <blockquote class="relative">
+                          <svg class="absolute left-0 w-10 h-10 text-secondary fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                            <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+                          </svg> <br>
+                          <p class="pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
+                            Un parfait mélange d’écoute de son élève et d’exigence, pour l’entraîner à se dépasser.
+                            J’ai débuté les séances de coaching avec Helena il y a un peu plus de 3 mois, pour retrouver de la condition physique.
+
+                            Elle est attentive à mes objectifs et à mes douleurs. Elle sait les comprendre, me les expliquer et proposer des exercices adaptés.
+                            Elle m’a aidée à reprendre conscience des différentes parties de mon corps, à ré-utiliser des articulations douloureuses. Le travail de renforcement est ciblé, intensif et adapté à chaque séance.
+                            J’ai augmenté ma force musculaire et je me sens mieux dans mon corps.
+                          </p>
+                        </blockquote>
+                        <div class="info flex place-items-center space-x-3">
+                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_celine.jpg" alt="Photo de profil de Céline" width="384" height="512">
+                          <figcaption class="font-medium">
+                            <div class="text-primary">
+                              Celine
+                            </div>
+                            <div class="text-white">
+                              Décoratrice d'interieur
+                            </div>
+                          </figcaption>
+                        </div>
+                      </div>
+                </figure>
+
+                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg ">
+                      <div class="space-y-4">
+                        <blockquote class="relative">
+                          <svg stroke="#F9968B" class="absolute left-0 w-10 h-10 text-secondary fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
+                            <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+                          </svg> <br>
+                          <p class=" pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
+                            En seulement 4 semaines, je vois déjà des résultats sur mon poids, mais surtout, je redécouvre mon corps et tous ses muscles laissés à l’abandon pendant 2 confinements.
+                            Helena est très à l’écoute et regorge de motivation quand vous en manquez.
+                          </p>
+                        </blockquote>
+                        <div class="info flex place-items-center space-x-3">
+                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_lena.png" alt="Photo de profil de Lena" width="384" height="512">
+                          <figcaption class="font-medium">
+                            <div class="text-primary">
+                              Lena
+                            </div>
+                            <div class="text-white">
+                              Designer web
+                            </div>
+                          </figcaption>
+                        </div>
+                      </div>
+                </figure>
+            </div>
         </div>
-      </div>
+                
     </div>
-  </footer>
-</body>
-</html>
+</section>
+
+ <!-- CTA -->
+        <section id="coaching__CTA" class="bg-white md:px-0 lg:-space-y-16">
+          <div class="customContainer">
+            <div class="flex flex-col-reverse md:flex md:flex-row items-center">
+              <div class="w-full md:w-1/2">
+                <div class="w-full h-auto overflow-hidden rounded-lg shadow-xl pb-8">
+                  <img src="/images/atelier_sport_sante.jpg" alt="Atelier sport santé">
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 md:px-4 lg:px-5">
+                <div class="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
+                  <h2>
+                    <span class="block xl:inline">Programme personnalisé</span>
+                  </h2>
+                  <p class="undertitle text-black sm:max-w-md lg:text-xl md:max-w-3xl">
+                    Une coach pour vous garder motivé.e et vous faire progresser.
+                  </p>
+                  <button class="max-w-xs relative flex flex-col sm:flex-row sm:space-x-4">
+                    <a href="/helena/#contact" class="btn btn-primary">
+                      Booker une session
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
