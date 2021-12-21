@@ -11,8 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/icons/');
 
   return {
-    markdownTemplateEngine: "njk",
-    templateFormats: ["html", "njk", "md"],
+    
     dir: {
       input: 'src',
       output: '_site'

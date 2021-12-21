@@ -1,1 +1,1 @@
-npx tailwindcss -i src/css/tailwind.css -o _site/css/tailwindcss.css --minify
+npx tailwindcss -i src/css/tailwind.css -o _site/css/tailwind.css --minify
