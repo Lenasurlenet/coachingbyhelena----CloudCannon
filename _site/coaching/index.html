@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Coaching</title>
   </head>
   <body>
@@ -570,664 +570,869 @@
         </div>
       </div>
 
-      <div class="tablinks space-x-4 w-full flex justify-center cursor-pointer">
-        <span
-          class="
-            bg-white
-            text-center text-xs
-            md:text-base
-            lg:text-lg
-            font-semibold
-            uppercase
-            hover:bg-black hover:text-white
-            w-32
-            py-3
-            shadow-lg
-            rounded-t-lg
-            block
-            leading-normal
-          "
-          v-for="(tab, index) in tabs"
-          :key="index"
-          @click="selectedTabs = tab"
-          :class="{activeTab: selectedTabs === tab}"
-        >
-          
-        </span>
-      </div>
-      <!-- End tablinks -->
-
-      <div class="tabContent p-8 md:pt-12 lg:pt-16">
-        <!-- Tab Solo -->
-        <div class="solo block w-full h-full" v-show="selectedTabs === 'Solo'">
-          <div class="card_priceWrapper w-full">
-            <div class="flex-1 mx-auto pt-8">
-              <!-- cardPrice background  -->
-              <ul
+      <div class="content">
+        <div x-data="{tab: 1}">
+          <div
+            class="
+              tab
+              tablinks
+              space-x-4
+              w-full
+              flex
+              justify-center
+              cursor-pointer
+            "
+          >
+            <a
+              :class="{'active': tab == 1}"
+              @click.prevent="tab = 1"
+              href="#"
+              class="button"
+            >
+              <span
                 class="
-                  presentiel
-                  grid grid-cols-1
-                  gap-4
-                  place-items-center
-                  sm:grid-cols-2
-                  lg:grid-cols-3 lg:gap-6
+                  bg-white
+                  text-center text-xs
+                  md:text-base
+                  lg:text-lg
+                  font-semibold
+                  uppercase
+                  hover:bg-black hover:text-white
+                  w-32
+                  py-3
+                  shadow-lg
+                  rounded-t-lg
+                  block
+                  leading-normal
                 "
               >
-                <li
-                  class="
-                    cardBg
-                    relative
-                    bg-secondary
-                    h-72
-                    w-60
-                    rounded-lg
-                    mb-10
-                  "
-                >
-                  <!-- cardPrice -->
-                  <article
-                    class="
-                      cardPrice
-                      absolute
-                      bg-black
-                      h-72
-                      w-60
-                      rounded-lg
-                      p-8
-                      space-y-4
-                      right-4
-                      -top-4
-                    "
-                    data-aos="flip-right"
-                  >
-                    <h4 class="text-secondary pb-0">Présentiel</h4>
-                    <!-- cardPrice overline -->
-                    <div
-                      class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                    ></div>
-                    <!-- cardPrice title -->
-                    <p class="text-[40px] text-white font-extrabold">
-                      60€ <span class="text-base font-normal">séance</span>
-                    </p>
-
-                    <!-- cardPrice description -->
-                    <div class="cardDescription">
-                      <div class="cardText">
-                        <p class="text-xl font-normal text-white">
-                          cours à la carte <br />
-                          sans engagement
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End cardPrice description -->
-                  </article>
-                  <!-- End cardPrice -->
-                </li>
-                <!-- End cardPrice background  -->
-
-                <!-- cardPrice background  -->
-                <li
-                  class="
-                    cardBg
-                    relative
-                    bg-secondary
-                    h-72
-                    w-60
-                    rounded-lg
-                    mb-10
-                  "
-                >
-                  <!-- cardPrice -->
-                  <article
-                    class="
-                      cardPrice
-                      absolute
-                      bg-black
-                      h-72
-                      w-60
-                      rounded-lg
-                      p-8
-                      space-y-4
-                      right-4
-                      -top-4
-                    "
-                    data-aos="flip-right"
-                  >
-                    <h4 class="text-secondary pb-0">Présentiel</h4>
-                    <!-- cardPrice overline -->
-                    <div
-                      class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                    ></div>
-                    <!-- cardPrice title -->
-                    <p class="text-[40px] text-white font-extrabold">
-                      400€ <span class="text-base font-normal">mois</span>
-                    </p>
-
-                    <!-- cardPrice description -->
-                    <div class="cardDescription">
-                      <div class="cardText">
-                        <p class="text-xl font-normal text-white">
-                          2 séances / semaine <br />
-                          sans engagement
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End cardPrice description -->
-                  </article>
-                  <!-- End cardPrice -->
-                </li>
-                <!-- End cardPrice background  -->
-
-                <!-- cardPrice background  -->
-                <li
-                  class="
-                    cardBg
-                    relative
-                    bg-secondary
-                    h-72
-                    w-60
-                    rounded-lg
-                    mb-10
-                  "
-                >
-                  <!-- cardPrice -->
-                  <article
-                    class="
-                      cardPrice
-                      absolute
-                      bg-black
-                      h-72
-                      w-60
-                      rounded-lg
-                      p-8
-                      space-y-4
-                      right-4
-                      -top-4
-                    "
-                    data-aos="flip-right"
-                  >
-                    <h4 class="text-secondary pb-0">Présentiel</h4>
-                    <!-- cardPrice overline -->
-                    <div
-                      class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                    ></div>
-                    <!-- cardPrice title -->
-                    <p class="text-[40px] text-white font-extrabold">
-                      480€ <span class="text-base font-normal">mois</span>
-                    </p>
-
-                    <!-- cardPrice description -->
-                    <div class="cardDescription">
-                      <div class="cardText">
-                        <p class="text-xl font-normal text-white">
-                          3 séances / semaine <br />
-                          sans engagement
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End cardPrice description -->
-                  </article>
-                  <!-- End cardPrice -->
-                </li>
-                <!-- End cardPrice background  -->
-              </ul>
-            </div>
-
-            <ul
-              class="
-                visio
-                grid grid-cols-1
-                gap-4
-                place-items-center
-                sm:grid-cols-2
-                lg:grid-cols-3 lg:gap-6
-              "
+                Solo
+              </span>
+            </a>
+            <a
+              :class="{'active': tab == 2}"
+              @click.prevent="tab = 2;"
+              href="#"
+              class="button"
             >
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
+              <span
+                class="
+                  bg-white
+                  text-center text-xs
+                  md:text-base
+                  lg:text-lg
+                  font-semibold
+                  uppercase
+                  hover:bg-black hover:text-white
+                  w-32
+                  py-3
+                  shadow-lg
+                  rounded-t-lg
+                  block
+                  leading-normal
+                "
               >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    50€ <span class="text-base font-normal">séance</span>
-                  </p>
-
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        cours à la carte <br />
-                        sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
+                Duo
+              </span>
+            </a>
+            <a
+              :class="{'active': tab == 3}"
+              @click.prevent="tab = 3;"
+              href="#"
+              class="button"
+            >
+              <span
+                class="
+                  bg-white
+                  text-center text-xs
+                  md:text-base
+                  lg:text-lg
+                  font-semibold
+                  uppercase
+                  hover:bg-black hover:text-white
+                  w-32
+                  py-3
+                  shadow-lg
+                  rounded-t-lg
+                  block
+                  leading-normal
+                "
               >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    320€ <span class="text-base font-normal">mois</span>
-                  </p>
-
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        2 séances / semaine <br />
-                        sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    360€ <span class="text-base font-normal">mois</span>
-                  </p>
-
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        3 séances/semaine <br />
-                        sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-            </ul>
+                Groupe
+              </span>
+            </a>
           </div>
-          <!-- End card_priceWrapper -->
-        </div>
+          <div class="content pt-8">
+              <div x-show="tab == 1">
+                <div class="card_priceWrapper w-full">
+                  <div class="flex-1 mx-auto pt-8">
+                    <!-- cardPrice background  -->
+                    <ul
+                      class="
+                        presentiel
+                        grid grid-cols-1
+                        gap-4
+                        place-items-center
+                        sm:grid-cols-2
+                        lg:grid-cols-3 lg:gap-6
+                      "
+                    >
+                      <li
+                        class="
+                          cardBg
+                          relative
+                          bg-secondary
+                          h-72
+                          w-60
+                          rounded-lg
+                          mb-10
+                        "
+                      >
+                        <!-- cardPrice -->
+                        <article
+                          class="
+                            cardPrice
+                            absolute
+                            bg-black
+                            h-72
+                            w-60
+                            rounded-lg
+                            p-8
+                            space-y-4
+                            right-4
+                            -top-4
+                          "
+                          data-aos="flip-right"
+                        >
+                          <h4 class="text-secondary pb-0">Présentiel</h4>
+                          <!-- cardPrice overline -->
+                          <div
+                            class="
+                              cardTitle__overline
+                              bg-secondary
+                              h-0.5
+                              w-28
+                              mb-4
+                            "
+                          ></div>
+                          <!-- cardPrice title -->
+                          <p class="text-[40px] text-white font-extrabold">
+                            60€
+                            <span class="text-base font-normal">séance</span>
+                          </p>
 
-        <!-- Tab Duo -->
-        <div class="duo block" v-show="selectedTabs === 'Duo'">
-          <div class="card_priceWrapper w-full">
-            <ul
-              class="
-                presentiel
-                grid grid-cols-1
-                gap-4
-                place-items-center
-                sm:grid-cols-2
-                md:grid-cols-3 md:gap-6
-                lg:gap-8
-              "
-            >
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Présentiel</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    80€ <span class="text-base font-normal">séance</span>
-                  </p>
+                          <!-- cardPrice description -->
+                          <div class="cardDescription">
+                            <div class="cardText">
+                              <p class="text-xl font-normal text-white">
+                                cours à la carte <br />
+                                sans engagement
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End cardPrice description -->
+                        </article>
+                        <!-- End cardPrice -->
+                      </li>
+                      <!-- End cardPrice background  -->
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        cours à la carte <br />
-                        2 pers<br />
-                        sans engagement
-                      </p>
-                    </div>
+                      <!-- cardPrice background  -->
+                      <li
+                        class="
+                          cardBg
+                          relative
+                          bg-secondary
+                          h-72
+                          w-60
+                          rounded-lg
+                          mb-10
+                        "
+                      >
+                        <!-- cardPrice -->
+                        <article
+                          class="
+                            cardPrice
+                            absolute
+                            bg-black
+                            h-72
+                            w-60
+                            rounded-lg
+                            p-8
+                            space-y-4
+                            right-4
+                            -top-4
+                          "
+                          data-aos="flip-right"
+                        >
+                          <h4 class="text-secondary pb-0">Présentiel</h4>
+                          <!-- cardPrice overline -->
+                          <div
+                            class="
+                              cardTitle__overline
+                              bg-secondary
+                              h-0.5
+                              w-28
+                              mb-4
+                            "
+                          ></div>
+                          <!-- cardPrice title -->
+                          <p class="text-[40px] text-white font-extrabold">
+                            400€ <span class="text-base font-normal">mois</span>
+                          </p>
+
+                          <!-- cardPrice description -->
+                          <div class="cardDescription">
+                            <div class="cardText">
+                              <p class="text-xl font-normal text-white">
+                                2 séances / semaine <br />
+                                sans engagement
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End cardPrice description -->
+                        </article>
+                        <!-- End cardPrice -->
+                      </li>
+                      <!-- End cardPrice background  -->
+
+                      <!-- cardPrice background  -->
+                      <li
+                        class="
+                          cardBg
+                          relative
+                          bg-secondary
+                          h-72
+                          w-60
+                          rounded-lg
+                          mb-10
+                        "
+                      >
+                        <!-- cardPrice -->
+                        <article
+                          class="
+                            cardPrice
+                            absolute
+                            bg-black
+                            h-72
+                            w-60
+                            rounded-lg
+                            p-8
+                            space-y-4
+                            right-4
+                            -top-4
+                          "
+                          data-aos="flip-right"
+                        >
+                          <h4 class="text-secondary pb-0">Présentiel</h4>
+                          <!-- cardPrice overline -->
+                          <div
+                            class="
+                              cardTitle__overline
+                              bg-secondary
+                              h-0.5
+                              w-28
+                              mb-4
+                            "
+                          ></div>
+                          <!-- cardPrice title -->
+                          <p class="text-[40px] text-white font-extrabold">
+                            480€ <span class="text-base font-normal">mois</span>
+                          </p>
+
+                          <!-- cardPrice description -->
+                          <div class="cardDescription">
+                            <div class="cardText">
+                              <p class="text-xl font-normal text-white">
+                                3 séances / semaine <br />
+                                sans engagement
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End cardPrice description -->
+                        </article>
+                        <!-- End cardPrice -->
+                      </li>
+                      <!-- End cardPrice background  -->
+                    </ul>
                   </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Présentiel</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    560€ <span class="text-base font-normal">mois</span>
-                  </p>
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        2 séances / semaine <br />
-                        2 pers<br />
-                        sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Présentiel</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    480€ <span class="text-base font-normal">mois</span>
-                  </p>
+                  <ul
+                    class="
+                      visio
+                      grid grid-cols-1
+                      gap-4
+                      place-items-center
+                      sm:grid-cols-2
+                      lg:grid-cols-3 lg:gap-6
+                    "
+                  >
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          50€ <span class="text-base font-normal">séance</span>
+                        </p>
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        3 séances / semaine <br />
-                        2pers <br />
-                        Sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-            </ul>
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              cours à la carte <br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          320€ <span class="text-base font-normal">mois</span>
+                        </p>
 
-            <ul
-              class="
-                visio
-                grid grid-cols-1
-                gap-4
-                place-items-center
-                sm:grid-cols-2
-                md:grid-cols-3 md:gap-6
-                lg:gap-8
-              "
-            >
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-                data-aos="flip-right"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    70€ <span class="text-base font-normal">La séance</span>
-                  </p>
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              2 séances / semaine <br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          360€ <span class="text-base font-normal">mois</span>
+                        </p>
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        cours à la carte <br />
-                        2pers <br />
-                        sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-                data-aos="flip-right"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    480€ <span class="text-base font-normal">mois</span>
-                  </p>
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              3 séances/semaine <br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                  </ul>
+                </div>
+                <!-- End card_priceWrapper -->
+              </div>
+              <div x-show="tab == 2">
+                <div class="card_priceWrapper w-full pt-8">
+                  <ul
+                    class="
+                      presentiel
+                      grid grid-cols-1
+                      gap-4
+                      place-items-center
+                      sm:grid-cols-2
+                      md:grid-cols-3 md:gap-6
+                      lg:gap-8
+                    "
+                  >
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Présentiel</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          80€ <span class="text-base font-normal">séance</span>
+                        </p>
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        2 séances / semaine <br />
-                        2pers <br />
-                        Sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-              <!-- cardPrice background  -->
-              <li
-                class="cardBg relative bg-secondary h-72 w-60 rounded-lg mb-10"
-                data-aos="flip-right"
-              >
-                <!-- cardPrice -->
-                <article
-                  class="
-                    cardPrice
-                    absolute
-                    bg-black
-                    h-72
-                    w-60
-                    rounded-lg
-                    p-8
-                    space-y-4
-                    right-4
-                    -top-4
-                  "
-                  data-aos="flip-right"
-                >
-                  <h4 class="text-secondary pb-0">Visio</h4>
-                  <!-- cardPrice overline -->
-                  <div
-                    class="cardTitle__overline bg-secondary h-0.5 w-28 mb-4"
-                  ></div>
-                  <!-- cardPrice title -->
-                  <p class="text-[40px] text-white font-extrabold">
-                    600€ <span class="text-base font-thin">mois</span>
-                  </p>
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              cours à la carte <br />
+                              2 pers<br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Présentiel</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          560€ <span class="text-base font-normal">mois</span>
+                        </p>
 
-                  <!-- cardPrice description -->
-                  <div class="cardDescription">
-                    <div class="cardText">
-                      <p class="text-xl font-normal text-white">
-                        3 séances / semaine <br />
-                        2pers <br />
-                        Sans engagement
-                      </p>
-                    </div>
-                  </div>
-                  <!-- End cardPrice description -->
-                </article>
-                <!-- End cardPrice -->
-              </li>
-              <!-- End cardPrice background  -->
-            </ul>
-          </div>
-          <!-- End card_priceWrapper -->
-        </div>
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              2 séances / semaine <br />
+                              2 pers<br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Présentiel</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          480€ <span class="text-base font-normal">mois</span>
+                        </p>
 
-        <!-- Tab Groupe -->
-        <div class="group block" v-show="selectedTabs === 'Groupe'">
-          <div class="card_priceWrapper w-full">
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              3 séances / semaine <br />
+                              2pers <br />
+                              Sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                  </ul>
+
+                  <ul
+                    class="
+                      visio
+                      grid grid-cols-1
+                      gap-4
+                      place-items-center
+                      sm:grid-cols-2
+                      md:grid-cols-3 md:gap-6
+                      lg:gap-8
+                    "
+                  >
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                      data-aos="flip-right"
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          70€
+                          <span class="text-base font-normal">La séance</span>
+                        </p>
+
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              cours à la carte <br />
+                              2pers <br />
+                              sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                      data-aos="flip-right"
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          480€ <span class="text-base font-normal">mois</span>
+                        </p>
+
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              2 séances / semaine <br />
+                              2pers <br />
+                              Sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                    <!-- cardPrice background  -->
+                    <li
+                      class="
+                        cardBg
+                        relative
+                        bg-secondary
+                        h-72
+                        w-60
+                        rounded-lg
+                        mb-10
+                      "
+                      data-aos="flip-right"
+                    >
+                      <!-- cardPrice -->
+                      <article
+                        class="
+                          cardPrice
+                          absolute
+                          bg-black
+                          h-72
+                          w-60
+                          rounded-lg
+                          p-8
+                          space-y-4
+                          right-4
+                          -top-4
+                        "
+                        data-aos="flip-right"
+                      >
+                        <h4 class="text-secondary pb-0">Visio</h4>
+                        <!-- cardPrice overline -->
+                        <div
+                          class="
+                            cardTitle__overline
+                            bg-secondary
+                            h-0.5
+                            w-28
+                            mb-4
+                          "
+                        ></div>
+                        <!-- cardPrice title -->
+                        <p class="text-[40px] text-white font-extrabold">
+                          600€ <span class="text-base font-thin">mois</span>
+                        </p>
+
+                        <!-- cardPrice description -->
+                        <div class="cardDescription">
+                          <div class="cardText">
+                            <p class="text-xl font-normal text-white">
+                              3 séances / semaine <br />
+                              2pers <br />
+                              Sans engagement
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End cardPrice description -->
+                      </article>
+                      <!-- End cardPrice -->
+                    </li>
+                    <!-- End cardPrice background  -->
+                  </ul>
+                </div>
+              </div>
+              <div x-show="tab == 3">
+                <div class="card_priceWrapper w-full pt-8">
             <ul
               class="
                 presentiel
@@ -1288,12 +1493,13 @@
             </ul>
           </div>
           <!-- End card_priceWrapper -->
+              </div>
+              
+          </div>
         </div>
-        <!-- End group block -->
-      </div>
-    </div>
-    <!-- Container -->
+      </div>  
   </section>
+
   <!-- End tabs -->
 
   <!--end of pricing-->
