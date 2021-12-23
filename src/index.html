@@ -1,304 +1,589 @@
 ---
 title: Accueil
-layout: 'base.njk'
+layout: "base.njk"
 ---
-  
-  <!--Hero Section-->
 
-  <header id="homeHero" class="block w-full bg-gradient-to-r from-black to-primary pt:12 md:pt-16 lg:pt-20 pb-24 2xl:-pb-32">
-    <div class="customContainer">
-      <div class="homeHero__wrapper w-full h-full flex flex-col-reverse md:flex-row" data-aos="zoom-out">
-     
-        <div class="heroRight block p-4 lg:p-8 w-full md:w-1/2 xl:3/5">
-          <span class="overtitle">
-            Coaching sportif privé à Bordeaux ou en visio
-          </span>
-          <h1 class="editable homeHero-title italic font-extrabold pt-4 pb-10 text-lighter-secondary leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
-            Faites le plein d'énergie ...
-          </h1>
-          <span class="editable heroText text-white font-medium text-lg md:text-xl">
-            Retrouvez la forme, dessinez vos muscles, votre ligne et restez motivé.e, grâce à un programme sur-mesure et un suivi personnalisé.
-          </span>
-          <div class="cta max-w-xs md:flex md:flex-col space-y-6 py-6 md:mt-10">
-            <button class="btn btn-primary">
-              <a href="tel:+33 6 83 64 07">Je veux être coaché-e</a>
-              <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-            </button>
-            <button class="btn btn-secondary">
-              <a href="/#homeMain" class="flex">
-                Visiter
-                <img src="/icons/arrowdown.svg" alt="icone flêche vers le bas" class="ml-3">
-              </a>
-            </button>
-          </div>
-        </div>
-        <div class="heroLeft p-4 md:p6 lg:p-8 md:w-1/2 xl:h-2/5">
-          <img src="/images/pose_du_coach.jpg" class="h-96 w-full block rounded-lg object-cover object-center"/>
-          <div class="relative rounded-b-lg rounded-t-none bottom-4 xl:-inset-8 quote bg-black xl:rounded-lg p-5 md:p-6 lg:p-7 xl:p-8 2xl:p-9">
-            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z" fill="#F9968B"/>
-              <path d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z" fill="#F9968B"/>
+<!--Hero Section-->
+
+<header
+  id="homeHero"
+  class="
+    block
+    w-full
+    bg-gradient-to-r
+    from-black
+    to-primary
+    pt:12
+    md:pt-16
+    lg:pt-20
+    pb-24
+    2xl:-pb-32
+  "
+>
+  <div class="customContainer">
+    <div
+      class="homeHero__wrapper w-full h-full flex flex-col-reverse md:flex-row"
+      data-aos="zoom-out"
+    >
+      <div class="heroRight block p-4 lg:p-8 w-full md:w-1/2 xl:3/5">
+        <span class="overtitle">
+          Coaching sportif privé à Bordeaux ou en visio
+        </span>
+        <h1
+          class="
+            editable
+            homeHero-title
+            italic
+            font-extrabold
+            pt-4
+            pb-10
+            text-lighter-secondary
+            leading-tight
+            text-3xl
+            md:text-4xl
+            lg:text-5xl
+            xl:text-6xl
+            2xl:text-7xl
+          "
+        >
+          Faites le plein d'énergie ...
+        </h1>
+        <span
+          class="editable heroText text-white font-medium text-lg md:text-xl"
+        >
+          Retrouvez la forme, dessinez vos muscles, votre ligne et restez
+          motivé.e, grâce à un programme sur-mesure et un suivi personnalisé.
+        </span>
+        <div class="cta max-w-xs md:flex md:flex-col space-y-6 py-6 md:mt-10">
+          <button class="btn btn-primary">
+            <a href="tel:+33 6 83 64 07">Je veux être coaché-e</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+              />
             </svg>
-            <blockquote class="editable w-full text-white">Si tu prends le temps, que tu es motivé.e, je te promets un résultat sur ton bien-être, sur ta posture, sur ton ressenti dans ton corps, si on travaille autant chacun.e.</blockquote>
-          </div>
-        </div>   
+          </button>
+          <button class="btn btn-secondary">
+            <a href="/#homeMain" class="flex">
+              Visiter
+              <img
+                src="/icons/arrowdown.svg"
+                alt="icone flêche vers le bas"
+                class="ml-3"
+              />
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="heroLeft p-4 md:p6 lg:p-8 md:w-1/2 xl:h-2/5">
+        <img
+          src="/images/pose_du_coach.jpg"
+          class="
+            editable
+            h-96
+            w-full
+            block
+            rounded-lg
+            object-cover object-center
+          "
+        />
+        <div
+          class="
+            relative
+            rounded-b-lg rounded-t-none
+            bottom-4
+            xl:-inset-8
+            quote
+            bg-black
+            xl:rounded-lg
+            p-5
+            md:p-6
+            lg:p-7
+            xl:p-8
+            2xl:p-9
+          "
+        >
+          <svg
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z"
+              fill="#F9968B"
+            />
+            <path
+              d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z"
+              fill="#F9968B"
+            />
+          </svg>
+          <blockquote class="editable w-full text-white">
+            Si tu prends le temps, que tu es motivé.e, je te promets un résultat
+            sur ton bien-être, sur ta posture, sur ton ressenti dans ton corps,
+            si on travaille autant chacun.e.
+          </blockquote>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- offer -->
-        <section id="sellingPoints" class="pb-6 h-auto mx-auto">
-          <div class="customContainer">
-            <div class="sellingPoints-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center gap-4">
-                
-              <article class="card__sellingPoint" data-aos="flip-right">
-                    <img src="/icons/activity.svg" alt="icon activity">
-                    <h4>
-                      Evaluation
-                    </h4>
-                    <p class="text-md text-white py-4">
-                     Test de condition physique. <br> Déterminons votre objectif.
-                    </p>
-              </article>
+<!-- offer -->
+<section id="sellingPoints" class="pb-6 h-auto mx-auto">
+  <div class="customContainer">
+    <div
+      class="
+        sellingPoints-wrapper
+        grid grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        place-items-center
+        gap-4
+      "
+    >
+      <article class="card__sellingPoint" data-aos="flip-right">
+        <img src="/icons/activity.svg" alt="icon activity" />
+        <h4>Evaluation</h4>
+        <p class="text-md text-white py-4">
+          Test de condition physique. <br />
+          Déterminons votre objectif.
+        </p>
+      </article>
 
-              <article class="card__sellingPoint" data-aos="flip-right">
-                    <img src="/icons/chart.svg" alt="icon activity">
-                    <h4>
-                      Suivi personnalisé
-                    </h4>
-                    <p class="text-md text-white py-4">
-                      Vos progrès sont quantifiés <br> Vos entrainements évolutifs.
-                    </p>
-              </article>
-              <article class="card__sellingPoint" data-aos="flip-right">
-                    <img src="/icons/monitor.svg" alt="icon screen">
-                    <h4>
-                      Domicile, extérieur, visio..
-                    </h4>
-                    <p class="text-md text-white py-4">
-                      Gagnez du temps et du confort <br> Choisissez où a lieu votre séance.
-                    </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-    <!-- Coaching preview -->
-        <section id="coachingPreview" class="coaching bg-white">
-          <div class="customContainer">
-            <div class="blockTitle" data-aos="fade-right">
-              <h2>Entraînements sur-mesures</h2>
-              <p class="undertitle text-black">
-                Déterminons votre objectif et un parcours d'accompagnement.
-              </p>
-            </div>
-            <div class="coaching__content w-full block lg:py-16 lg:flex justify-stretch">
-              <div class="coaching__images mt-10 lg:-mx-4 lg:mt-0 lg:w-2/3 xl:w-3/5">
-                  <div class="relative space-y-4">
-                      <div class="flex items-end justify-start space-x-4">
-                          <img class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-72" src="https://images.pexels.com/photos/5262963/pexels-photo-5262963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="1"/>
-                          <img class="rounded-lg shadow-lg w-36 sm:w-48 md:w-72 lg:w-56"  src="https://images.pexels.com/photos/6740753/pexels-photo-6740753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="2"/>
-                      </div>
-                      <div class="flex items-start justify-center space-x-4">
-                          <img class="rounded-lg shadow-lg w-32 md:w-56" src="https://images.unsplash.com/photo-1591258370814-01609b341790?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80" alt="3"/>
-                          <img class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-64" src="/images/renforcement_musculaire.jpg" alt="4"/>
-                      </div>
-                  </div>
-              </div>
-              <div class="coachingFeatures mt-6 lg:w-2/5" data-aos="fade-left">
-                <ul class="mt-10">
-                    <li>
-                        <article class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
-                                   <img src="/icons/dumbell.svg" alt="" class="text-secondary">
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-black">
-                                  Renforcement musculaire
-                                </h3>
-                                <p class="text-black mt-2">
-                                  Pour gagner en force et en énergie.
-                                </p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="mt-10">
-                        <article class="flex items-start">
-                            <div class="">
-                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
-                                  <img src="/icons/scale.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-black">
-                                  Perte de poids
-                                </h3>
-                                <p class="text-black mt-2">
-                                  Pour dessiner votre silhouette et atteindre votre objectif de poids.
-                                </p>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="mt-10">
-                        <article class="flex items-start">
-                            <div class="flex-shrink-0">
-                                <div class="flex plate-items-center h-12 w-12 rounded-lg p-2 bg-black">
-                                  <img src="/icons/battery.svg" alt="">   
-                                </div>
-                            </div>
-                            <div class="ml-4">
-                                <h3 class="text-black">
-                                  Sport santé senior
-                                </h3>
-                                <p class="text-black mt-2">
-                                  Prendre soin de son corps en améliorer sa qualité de vie. en gardant un corps fonctionnel et tonique.
-                                </p>
-                            </div>
-                        </article>
-                    </li>
-                </ul>
-                <div class="relative w-full mt-16">
-                  <a href="/coaching/#coaching" class="absolute flex flex-end items-center text-font-medium text-base md:text-lg xl:text-xl text-secondary-dark hover:text-secondary active:text-secondary-dark transition transform" >
-                    Tous les programmes
-                    <img src="/icons/arrowright.svg" alt="icone flêche vers la droite" class="ml-3">
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </section>
-
-   <!-- Testimonials preview -->
-<section class="testimonial bg-gradient-to-r from-primary to-black">
-    <div class="customContainer">
-        <div class="w-full h-full flex flex-col items-center lg:flex-row">
-            <div class="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 md:w-1/2" data-aos="fade-righ">
-                <p class="mb-2 text-base font-medium tracking-tight text-secondary uppercase">Des clientes satisfaites</p>
-                <h2 class="text-white">Témoignages</h2>
-                <p class="my-6 text-lg text-white">Quelques mots de mes coachées sur le travail que nous accomplissons ensemble</p>
-            </div>
-            <div class="w-full space-y-5 md:space-y-6 pb-6 md:w-1/2" data-aos="fade-left">
-
-                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
-                      <div class="space-y-4">
-                        <blockquote class="relative">
-                          <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z" fill="#F9968B"/>
-                            <path d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z" fill="#F9968B"/>
-                          </svg>
-                          <br>
-                          <p class="pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
-                            Ses connaissances aussi bien en anatomie qu’en physiologie font que Helena n’est pas un simple coach qui a des objectifs personnels à atteindre, non.
-                            Elle adapte et tire le meilleur de nous mêmes en nous poussant à nous améliorer même dans nos zones de faiblesse de sorte que les petites fragilités deviennent des forces. Donc un vrai accompagnement personnalisé et attentif.
-                          </p>
-                        </blockquote>
-                        <div class="info flex place-items-center space-x-3">
-                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_kamar.png" alt="Photo de profil de Kamar" width="384" height="512">
-                          <figcaption class="font-medium">
-                            <div class="text-primary">
-                              Kamar
-                            </div>
-                            <div class="text-white">
-                              Orthodentiste
-                            </div>
-                          </figcaption>
-                        </div>
-                      </div>
-                </figure>
-                
-                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
-                      <div class="space-y-4">
-                        <blockquote class="relative">
-                          <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z" fill="#F9968B"/>
-                            <path d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z" fill="#F9968B"/>
-                          </svg>
-                          <br>
-                          <p class="pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
-                            Un parfait mélange d’écoute de son élève et d’exigence, pour l’entraîner à se dépasser.
-                            J’ai débuté les séances de coaching avec Helena il y a un peu plus de 3 mois, pour retrouver de la condition physique.
-
-                            Elle est attentive à mes objectifs et à mes douleurs. Elle sait les comprendre, me les expliquer et proposer des exercices adaptés.
-                            Elle m’a aidée à reprendre conscience des différentes parties de mon corps, à ré-utiliser des articulations douloureuses. Le travail de renforcement est ciblé, intensif et adapté à chaque séance.
-                            J’ai augmenté ma force musculaire et je me sens mieux dans mon corps.
-                          </p>
-                        </blockquote>
-                        <div class="info flex place-items-center space-x-3">
-                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_celine.jpg" alt="Photo de profil de Céline" width="384" height="512">
-                          <figcaption class="font-medium">
-                            <div class="text-primary">
-                              Celine
-                            </div>
-                            <div class="text-white">
-                              Décoratrice d'interieur
-                            </div>
-                          </figcaption>
-                        </div>
-                      </div>
-                </figure>
-
-                <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg ">
-                      <div class="space-y-4">
-                        <blockquote class="relative">
-                          <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z" fill="#F9968B"/>
-                            <path d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z" fill="#F9968B"/>
-                          </svg>
-                          <br>
-                          <p class=" pt-2 text-white text-base md:text-lg font-medium line-clamp-3 md:line-clamp-2">
-                            En seulement 4 semaines, je vois déjà des résultats sur mon poids, mais surtout, je redécouvre mon corps et tous ses muscles laissés à l’abandon pendant 2 confinements.
-                            Helena est très à l’écoute et regorge de motivation quand vous en manquez.
-                          </p>
-                        </blockquote>
-                        <div class="info flex place-items-center space-x-3">
-                          <img class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full" src="/images/profil_lena.png" alt="Photo de profil de Lena" width="384" height="512">
-                          <figcaption class="font-medium">
-                            <div class="text-primary">
-                              Lena
-                            </div>
-                            <div class="text-white">
-                              Designer web
-                            </div>
-                          </figcaption>
-                        </div>
-                      </div>
-                </figure>
-            </div>
-        </div>             
+      <article class="card__sellingPoint" data-aos="flip-right">
+        <img src="/icons/chart.svg" alt="icon activity" />
+        <h4>Suivi personnalisé</h4>
+        <p class="text-md text-white py-4">
+          Vos progrès sont quantifiés <br />
+          Vos entrainements évolutifs.
+        </p>
+      </article>
+      <article class="card__sellingPoint" data-aos="flip-right">
+        <img src="/icons/monitor.svg" alt="icon screen" />
+        <h4>Domicile, extérieur, visio..</h4>
+        <p class="text-md text-white py-4">
+          Gagnez du temps et du confort <br />
+          Choisissez où a lieu votre séance.
+        </p>
+      </article>
     </div>
+  </div>
 </section>
 
-    <!-- CTA -->
-        <section id="coaching__CTA" class="bg-white md:px-0 lg:-space-y-16">
-          <div class="customContainer">
-            <div class="flex flex-col-reverse md:flex md:flex-row items-center">
-              <div class="w-full md:w-1/2" data-aos="fade-right">
-                <div class="w-full h-auto overflow-hidden rounded-lg shadow-xl pb-8">
-                  <img src="/images/atelier_sport_sante.jpg" alt="Atelier sport santé">
+<!-- Coaching preview -->
+<section id="coachingPreview" class="coaching bg-white">
+  <div class="customContainer">
+    <div class="blockTitle" data-aos="fade-right">
+      <h2>Entraînements sur-mesures</h2>
+      <p class="undertitle text-black">
+        Déterminons votre objectif et un parcours d'accompagnement.
+      </p>
+    </div>
+    <div
+      class="coaching__content w-full block lg:py-16 lg:flex justify-stretch"
+    >
+      <div class="coaching__images mt-10 lg:-mx-4 lg:mt-0 lg:w-2/3 xl:w-3/5">
+        <div class="relative space-y-4">
+          <div class="flex items-end justify-start space-x-4">
+            <img
+              class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-72"
+              src="https://images.pexels.com/photos/5262963/pexels-photo-5262963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="1"
+            />
+            <img
+              class="rounded-lg shadow-lg w-36 sm:w-48 md:w-72 lg:w-56"
+              src="https://images.pexels.com/photos/6740753/pexels-photo-6740753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="2"
+            />
+          </div>
+          <div class="flex items-start justify-center space-x-4">
+            <img
+              class="rounded-lg shadow-lg w-32 md:w-56"
+              src="https://images.unsplash.com/photo-1591258370814-01609b341790?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80"
+              alt="3"
+            />
+            <img
+              class="rounded-lg shadow-lg w-40 md:w-72 lg:w-56 xl:w-64"
+              src="/images/renforcement_musculaire.jpg"
+              alt="4"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="coachingFeatures mt-6 lg:w-2/5" data-aos="fade-left">
+        <ul class="mt-10">
+          <li>
+            <article class="flex items-start">
+              <div class="flex-shrink-0">
+                <div
+                  class="
+                    flex
+                    plate-items-center
+                    h-12
+                    w-12
+                    rounded-lg
+                    p-2
+                    bg-black
+                  "
+                >
+                  <img src="/icons/dumbell.svg" alt="" class="text-secondary" />
                 </div>
               </div>
-              <div class="w-full md:w-1/2 md:px-4 lg:px-5" data-aos="fade-left">
-                <div class="w-full flex flex-col justify-center items-center pb-6 space-y-6 max-w-prose md:space-y-4 lg:space-y-8 xl:space-y-9 md:pb-0">
-                  <h2>
-                    <span class="block xl:inline">Programme personnalisé</span>
-                  </h2>
-                  <p class="undertitle text-black lg:text-xl">
-                    Une coach pour vous garder motivé.e et vous faire progresser.
-                  </p>
-                  <button class="btn btn-primary">
-                    <a href="tel:+33 6 83 64 07">Je veux être coaché-e</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                  </button>
+              <div class="ml-4">
+                <h3 class="text-black">Renforcement musculaire</h3>
+                <p class="text-black mt-2">
+                  Pour gagner en force et en énergie.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="mt-10">
+            <article class="flex items-start">
+              <div class="">
+                <div
+                  class="
+                    flex
+                    plate-items-center
+                    h-12
+                    w-12
+                    rounded-lg
+                    p-2
+                    bg-black
+                  "
+                >
+                  <img src="/icons/scale.svg" alt="" />
                 </div>
               </div>
+              <div class="ml-4">
+                <h3 class="text-black">Perte de poids</h3>
+                <p class="text-black mt-2">
+                  Pour dessiner votre silhouette et atteindre votre objectif de
+                  poids.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="mt-10">
+            <article class="flex items-start">
+              <div class="flex-shrink-0">
+                <div
+                  class="
+                    flex
+                    plate-items-center
+                    h-12
+                    w-12
+                    rounded-lg
+                    p-2
+                    bg-black
+                  "
+                >
+                  <img src="/icons/battery.svg" alt="" />
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-black">Sport santé senior</h3>
+                <p class="text-black mt-2">
+                  Prendre soin de son corps en améliorer sa qualité de vie. en
+                  gardant un corps fonctionnel et tonique.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="relative w-full mt-16">
+          <a
+            href="/coaching/#coaching"
+            class="
+              absolute
+              flex flex-end
+              items-center
+              text-font-medium text-base
+              md:text-lg
+              xl:text-xl
+              text-secondary-dark
+              hover:text-secondary
+              active:text-secondary-dark
+              transition
+              transform
+            "
+          >
+            Tous les programmes
+            <img
+              src="/icons/arrowright.svg"
+              alt="icone flêche vers la droite"
+              class="ml-3"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials preview -->
+<section class="testimonial bg-gradient-to-r from-primary to-black">
+  <div class="customContainer">
+    <div class="w-full h-full flex flex-col items-center lg:flex-row">
+      <div
+        class="
+          flex flex-col
+          items-start
+          justify-center
+          w-full
+          h-full
+          pr-8
+          mb-10
+          lg:mb-0
+          md:w-1/2
+        "
+        data-aos="fade-righ"
+      >
+        <p
+          class="
+            mb-2
+            text-base
+            font-medium
+            tracking-tight
+            text-secondary
+            uppercase
+          "
+        >
+          Des clientes satisfaites
+        </p>
+        <h2 class="text-white">Témoignages</h2>
+        <p class="my-6 text-lg text-white">
+          Quelques mots de mes coachées sur le travail que nous accomplissons
+          ensemble
+        </p>
+      </div>
+      <div
+        class="w-full space-y-5 md:space-y-6 pb-6 md:w-1/2"
+        data-aos="fade-left"
+      >
+        <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
+          <div class="space-y-4">
+            <blockquote class="relative">
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z"
+                  fill="#F9968B"
+                />
+                <path
+                  d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z"
+                  fill="#F9968B"
+                />
+              </svg>
+              <br />
+              <p
+                class="
+                  pt-2
+                  text-white text-base
+                  md:text-lg
+                  font-medium
+                  line-clamp-3
+                  md:line-clamp-2
+                "
+              >
+                Ses connaissances aussi bien en anatomie qu’en physiologie font
+                que Helena n’est pas un simple coach qui a des objectifs
+                personnels à atteindre, non. Elle adapte et tire le meilleur de
+                nous mêmes en nous poussant à nous améliorer même dans nos zones
+                de faiblesse de sorte que les petites fragilités deviennent des
+                forces. Donc un vrai accompagnement personnalisé et attentif.
+              </p>
+            </blockquote>
+            <div class="info flex place-items-center space-x-3">
+              <img
+                class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full"
+                src="/images/profil_kamar.png"
+                alt="Photo de profil de Kamar"
+                width="384"
+                height="512"
+              />
+              <figcaption class="font-medium">
+                <div class="text-primary">Kamar</div>
+                <div class="text-white">Orthodentiste</div>
+              </figcaption>
             </div>
           </div>
-        </section>
+        </figure>
+
+        <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
+          <div class="space-y-4">
+            <blockquote class="relative">
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z"
+                  fill="#F9968B"
+                />
+                <path
+                  d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z"
+                  fill="#F9968B"
+                />
+              </svg>
+              <br />
+              <p
+                class="
+                  pt-2
+                  text-white text-base
+                  md:text-lg
+                  font-medium
+                  line-clamp-3
+                  md:line-clamp-2
+                "
+              >
+                Un parfait mélange d’écoute de son élève et d’exigence, pour
+                l’entraîner à se dépasser. J’ai débuté les séances de coaching
+                avec Helena il y a un peu plus de 3 mois, pour retrouver de la
+                condition physique. Elle est attentive à mes objectifs et à mes
+                douleurs. Elle sait les comprendre, me les expliquer et proposer
+                des exercices adaptés. Elle m’a aidée à reprendre conscience des
+                différentes parties de mon corps, à ré-utiliser des
+                articulations douloureuses. Le travail de renforcement est
+                ciblé, intensif et adapté à chaque séance. J’ai augmenté ma
+                force musculaire et je me sens mieux dans mon corps.
+              </p>
+            </blockquote>
+            <div class="info flex place-items-center space-x-3">
+              <img
+                class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full"
+                src="/images/profil_celine.jpg"
+                alt="Photo de profil de Céline"
+                width="384"
+                height="512"
+              />
+              <figcaption class="font-medium">
+                <div class="text-primary">Celine</div>
+                <div class="text-white">Décoratrice d'interieur</div>
+              </figcaption>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="testimonalCard-extract p-4 md:p-6 bg-black rounded-lg">
+          <div class="space-y-4">
+            <blockquote class="relative">
+              <svg
+                width="54"
+                height="54"
+                viewBox="0 0 54 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.79 24.825C16.6804 24.8288 15.5904 25.118 14.625 25.665C15.9842 22.1468 18.2386 19.0444 21.165 16.665C21.3324 16.5271 21.4711 16.3576 21.573 16.1661C21.6749 15.9747 21.7381 15.765 21.759 15.5491C21.7799 15.3332 21.7581 15.1153 21.6948 14.9078C21.6315 14.7004 21.5279 14.5074 21.39 14.34C21.2521 14.1726 21.0826 14.0339 20.8911 13.932C20.6997 13.8301 20.49 13.7669 20.2741 13.746C20.0582 13.7251 19.8403 13.7469 19.6329 13.8102C19.4254 13.8736 19.2324 13.9771 19.065 14.115C13.065 18.99 10.395 25.74 10.395 29.925C10.4053 31.4047 10.8463 32.8495 11.6641 34.0827C12.4818 35.316 13.641 36.2845 15 36.87C15.8795 37.2961 16.8427 37.5215 17.82 37.53C18.6802 37.5718 19.5399 37.4385 20.347 37.1381C21.1542 36.8377 21.8919 36.3766 22.5155 35.7826C23.139 35.1886 23.6355 34.4741 23.9747 33.6825C24.3139 32.8909 24.4888 32.0387 24.4888 31.1775C24.4888 30.3163 24.3139 29.4641 23.9747 28.6725C23.6355 27.8809 23.139 27.1664 22.5155 26.5724C21.8919 25.9784 21.1542 25.5173 20.347 25.2169C19.5399 24.9165 18.6802 24.7832 17.82 24.825H17.79Z"
+                  fill="#F9968B"
+                />
+                <path
+                  d="M34.5 24.825C33.3902 24.8274 32.2999 25.1168 31.335 25.665C32.6937 22.1504 34.9421 19.0491 37.86 16.665C38.0426 16.5334 38.1964 16.3657 38.3118 16.1724C38.4272 15.9791 38.5019 15.7643 38.5312 15.5411C38.5604 15.3178 38.5437 15.091 38.4821 14.8745C38.4204 14.6579 38.3151 14.4563 38.1725 14.282C38.03 14.1078 37.8534 13.9645 37.6534 13.861C37.4535 13.7576 37.2345 13.6961 37.0099 13.6805C36.7853 13.6648 36.5599 13.6953 36.3475 13.77C36.1351 13.8448 35.9403 13.9622 35.775 14.115C29.775 18.99 27.105 25.74 27.105 29.925C27.1121 31.388 27.5402 32.818 28.3382 34.0442C29.1362 35.2704 30.2702 36.241 31.605 36.84C32.5068 37.2785 33.4972 37.5043 34.5 37.5C35.3602 37.5418 36.2199 37.4085 37.027 37.1081C37.8342 36.8077 38.5719 36.3466 39.1954 35.7526C39.819 35.1586 40.3155 34.4441 40.6547 33.6525C40.9939 32.8609 41.1688 32.0087 41.1688 31.1475C41.1688 30.2863 40.9939 29.4341 40.6547 28.6425C40.3155 27.8509 39.819 27.1364 39.1954 26.5424C38.5719 25.9484 37.8342 25.4873 37.027 25.1869C36.2199 24.8865 35.3602 24.7532 34.5 24.795V24.825Z"
+                  fill="#F9968B"
+                />
+              </svg>
+              <br />
+              <p
+                class="
+                  pt-2
+                  text-white text-base
+                  md:text-lg
+                  font-medium
+                  line-clamp-3
+                  md:line-clamp-2
+                "
+              >
+                En seulement 4 semaines, je vois déjà des résultats sur mon
+                poids, mais surtout, je redécouvre mon corps et tous ses muscles
+                laissés à l’abandon pendant 2 confinements. Helena est très à
+                l’écoute et regorge de motivation quand vous en manquez.
+              </p>
+            </blockquote>
+            <div class="info flex place-items-center space-x-3">
+              <img
+                class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full"
+                src="/images/profil_lena.png"
+                alt="Photo de profil de Lena"
+                width="384"
+                height="512"
+              />
+              <figcaption class="font-medium">
+                <div class="text-primary">Lena</div>
+                <div class="text-white">Designer web</div>
+              </figcaption>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="coaching__CTA" class="bg-white md:px-0 lg:-space-y-16">
+  <div class="customContainer">
+    <div class="flex flex-col-reverse md:flex md:flex-row items-center">
+      <div class="w-full md:w-1/2" data-aos="fade-right">
+        <div class="w-full h-auto overflow-hidden rounded-lg shadow-xl pb-8">
+          <img
+            src="/images/atelier_sport_sante.jpg"
+            alt="Atelier sport santé"
+          />
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 md:px-4 lg:px-5" data-aos="fade-left">
+        <div
+          class="
+            w-full
+            flex flex-col
+            justify-center
+            items-center
+            pb-6
+            space-y-6
+            max-w-prose
+            md:space-y-4
+            lg:space-y-8
+            xl:space-y-9
+            md:pb-0
+          "
+        >
+          <h2>
+            <span class="block xl:inline">Programme personnalisé</span>
+          </h2>
+          <p class="undertitle text-black lg:text-xl">
+            Une coach pour vous garder motivé.e et vous faire progresser.
+          </p>
+          <button class="btn btn-primary">
+            <a href="tel:+33 6 83 64 07">Je veux être coaché-e</a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
