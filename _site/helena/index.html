@@ -364,14 +364,60 @@
   />
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <section id="photo_gallery" class="editable bg-black">
-    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-white">Coaching by Helena en images</h2>
-        <p class="text-white">
-          Quelques images de mes coachings et coachées en action
-        </p>
-      </div>
+  <section id="photo-gallery" class="bg-black">
+    <div class="customContainer swiper-container">
+      <ul class="swiper-wrapper">
+        
+        <li class="swiper-slide rounded-lg">
+            <img
+              loading="lazy"
+              alt=""
+              class="object-contain rounded-lg w-full h-56 lg:h-72"
+              src="/assets/gallery/atelier_sport_sante.jpg"
+            />
+
+            <div class="p-6">
+              <h4 class="mt-4 text-white">Atelier sport santé</h5>
+
+              <p class="mt-2 text-white">lorem ipsum</p>
+            </div>
+          </a>
+        </li>
+        
+        <li class="swiper-slide rounded-lg">
+            <img
+              loading="lazy"
+              alt=""
+              class="object-contain rounded-lg w-full h-56 lg:h-72"
+              src="/assets/gallery/helena_pilate.jpg"
+            />
+
+            <div class="p-6">
+              <h4 class="mt-4 text-white">Cours de pilate</h5>
+
+              <p class="mt-2 text-white">lorem ipsum</p>
+            </div>
+          </a>
+        </li>
+        
+        <li class="swiper-slide rounded-lg">
+            <img
+              loading="lazy"
+              alt=""
+              class="object-contain rounded-lg w-full h-56 lg:h-72"
+              src="/assets/gallery/coaching_prive.jpg"
+            />
+
+            <div class="p-6">
+              <h4 class="mt-4 text-white">coaching privé à domicile</h5>
+
+              <p class="mt-2 text-white">lorem ipsum</p>
+            </div>
+          </a>
+        </li>
+        
+      </ul>
+
     </div>
   </section>
 
@@ -437,11 +483,7 @@
                 <div class="flex justify-start mt-6">
                   <button type="submit" class="btn btn-primary space-x-3">
                     Envoyer
-                    <img
-                      src="/assets/icons/send.svg"
-                      alt="send icon"
-                      class="pl-2"
-                    />
+                    <img src="/assets/icons/send.svg" alt="send icon" class="pl-2" />
                   </button>
                 </div>
               </form>
@@ -465,6 +507,30 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const swiper = new Swiper(".swiper-container", {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: 32,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
 </main>
 
     </main>

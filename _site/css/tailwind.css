@@ -1208,6 +1208,10 @@ h4{
   bottom: 1rem;
 }
 
+.top-4{
+  top: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1292,8 +1296,28 @@ h4{
   margin-top: 4rem;
 }
 
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.ml-1\.5{
+  margin-left: 0.375rem;
+}
+
+.ml-1{
+  margin-left: 0.25rem;
+}
+
 .block{
   display: block;
+}
+
+.inline-block{
+  display: inline-block;
 }
 
 .flex{
@@ -1360,6 +1384,14 @@ h4{
   height: 3rem;
 }
 
+.h-4{
+  height: 1rem;
+}
+
+.h-56{
+  height: 14rem;
+}
+
 .w-full{
   width: 100%;
 }
@@ -1400,6 +1432,10 @@ h4{
   width: 3rem;
 }
 
+.w-4{
+  width: 1rem;
+}
+
 .max-w-prose{
   max-width: 65ch;
 }
@@ -1418,6 +1454,10 @@ h4{
 
 .max-w-xs{
   max-width: 20rem;
+}
+
+.max-w-\[640px\]{
+  max-width: 640px;
 }
 
 .flex-1{
@@ -1556,6 +1596,10 @@ h4{
   border-radius: 0.375rem;
 }
 
+.rounded-sm{
+  border-radius: 0.125rem;
+}
+
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -1626,6 +1670,11 @@ h4{
   --tw-gradient-to: #18191F;
 }
 
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -1694,6 +1743,21 @@ h4{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .pb-6{
@@ -2161,6 +2225,10 @@ h4{
 
   .lg\:h-20{
     height: 5rem;
+  }
+
+  .lg\:h-72{
+    height: 18rem;
   }
 
   .lg\:w-3\/5{
