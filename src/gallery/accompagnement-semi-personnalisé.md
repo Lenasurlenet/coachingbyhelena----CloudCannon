@@ -6,4 +6,3 @@ imageAlt: Accompagnement lors de l'atelier sport santé du lundi matin
 tags:
   - gallery_post
 ---
-kjkjlk

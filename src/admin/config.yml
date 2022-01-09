@@ -18,5 +18,4 @@ collections:
           widget: "string",
           default: ["gallery_post"],
         }
-      - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
