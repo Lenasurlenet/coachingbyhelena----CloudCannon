@@ -1,6 +1,6 @@
 ---
 title: "Cours de pilate"
-description: lorem ipsum
+description: Les cours de pilate comportent beaucoup d'étirements.
 image: /assets/gallery/helena_pilate.jpg
-imgaAlt: Cours de pilate
+imgaAlt: Instructrice Pilate, certifiée.
 ---
