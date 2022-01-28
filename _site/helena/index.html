@@ -417,6 +417,22 @@
           </a>
         </li>
         
+        <li class="swiper-slide rounded-lg">
+            <img
+              loading="lazy"
+              alt="Correction de posture lors d'un exercice de fentes avant"
+              class="object-contain rounded-lg w-full h-56 lg:h-72"
+              src="/assets/images/helena_cliente_fente.jpg"
+            />
+
+            <div class="p-6">
+              <h4 class="mt-4 text-white">Accompagnement personnalisé</h5>
+
+              <p class="mt-2 text-white">Je montre, j'accompagne, je corrige la posture</p>
+            </div>
+          </a>
+        </li>
+        
       </ul>
 
     </div>
@@ -523,6 +539,9 @@
         dynamicBullets: true,
       },
       breakpoints: {
+         320: {
+          slidesPerView: 1,
+        },
         640: {
           slidesPerView: 2,
         },
@@ -599,6 +618,7 @@
         });
       }
     </script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init(

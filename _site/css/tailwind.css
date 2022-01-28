@@ -938,26 +938,6 @@ h4{
   }
 }
 
-.aspect-w-1{
-  position: relative;
-  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-  --tw-aspect-w: 1;
-}
-
-.aspect-w-1 > *{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.aspect-h-1{
-  --tw-aspect-h: 1;
-}
-
 .undertitle{
   font-size: 1.15rem;
   letter-spacing: -0.03em;
@@ -1208,10 +1188,6 @@ h4{
   bottom: 1rem;
 }
 
-.top-4{
-  top: 1rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1256,6 +1232,10 @@ h4{
   margin-bottom: 5rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .mb-0{
   margin-bottom: 0px;
 }
@@ -1264,12 +1244,12 @@ h4{
   margin-top: 0.75rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
+.mt-4{
+  margin-top: 1rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
+.mt-2{
+  margin-top: 0.5rem;
 }
 
 .mb-2{
@@ -1288,36 +1268,12 @@ h4{
   margin-left: 1rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
 .mt-16{
   margin-top: 4rem;
 }
 
-.mt-12{
-  margin-top: 3rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
-}
-
-.ml-1\.5{
-  margin-left: 0.375rem;
-}
-
-.ml-1{
-  margin-left: 0.25rem;
-}
-
 .block{
   display: block;
-}
-
-.inline-block{
-  display: inline-block;
 }
 
 .flex{
@@ -1376,20 +1332,16 @@ h4{
   height: 6rem;
 }
 
+.h-56{
+  height: 14rem;
+}
+
 .h-40{
   height: 10rem;
 }
 
 .h-12{
   height: 3rem;
-}
-
-.h-4{
-  height: 1rem;
-}
-
-.h-56{
-  height: 14rem;
 }
 
 .w-full{
@@ -1432,10 +1384,6 @@ h4{
   width: 3rem;
 }
 
-.w-4{
-  width: 1rem;
-}
-
 .max-w-prose{
   max-width: 65ch;
 }
@@ -1444,20 +1392,8 @@ h4{
   max-width: 100%;
 }
 
-.max-w-screen-xl{
-  max-width: 1280px;
-}
-
-.max-w-xl{
-  max-width: 36rem;
-}
-
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-\[640px\]{
-  max-width: 640px;
 }
 
 .flex-1{
@@ -1596,10 +1532,6 @@ h4{
   border-radius: 0.375rem;
 }
 
-.rounded-sm{
-  border-radius: 0.125rem;
-}
-
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -1730,11 +1662,6 @@ h4{
   padding-right: 1rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1743,21 +1670,6 @@ h4{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-6{
@@ -2007,26 +1919,12 @@ h4{
 }
 
 @media (min-width: 640px){
-  .sm\:mt-16{
-    margin-top: 4rem;
-  }
-
   .sm\:w-48{
     width: 12rem;
   }
 
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .sm\:py-24{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
   }
 }
 
@@ -2227,12 +2125,12 @@ h4{
     display: flex;
   }
 
-  .lg\:h-20{
-    height: 5rem;
-  }
-
   .lg\:h-72{
     height: 18rem;
+  }
+
+  .lg\:h-20{
+    height: 5rem;
   }
 
   .lg\:w-3\/5{
